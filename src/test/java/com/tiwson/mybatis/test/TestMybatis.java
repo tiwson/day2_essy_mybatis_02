@@ -85,4 +85,25 @@ public class TestMybatis {
         System.out.println(user);
 
     }
+
+    /**
+     * 根据用户名模糊查询
+     * @throws Exception
+     */
+    @Test
+    public void testFindUserByUsername() throws Exception {
+
+        List<User> users = dao.findUserByUsername("%老%");
+        for(User user : users) {
+            System.out.println(user);
+        }
+
+    }
+
+    @Test
+    public void testFindTotalUser() throws Exception {
+
+        int total = dao.findTotalUser();
+        System.out.println(total);
+    }
 }

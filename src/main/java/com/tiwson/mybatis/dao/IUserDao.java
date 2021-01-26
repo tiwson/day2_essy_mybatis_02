@@ -14,4 +14,8 @@ public interface IUserDao {
     void deleteUser(Integer id);
 
     User findUser(Integer id);
+
+    List<User> findUserByUsername(String username);
+
+    int findTotalUser();
 }

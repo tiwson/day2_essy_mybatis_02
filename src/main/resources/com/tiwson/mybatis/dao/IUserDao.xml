@@ -23,4 +23,12 @@
     <select id="findUser" parameterType="int" resultType="com.tiwson.mybatis.bean.User">
         select * from user where id=#{id};
     </select>
+
+    <select id="findUserByUsername" parameterType="java.lang.String" resultType="com.tiwson.mybatis.bean.User">
+        select * from user where username like #{username}
+    </select>
+
+    <select id="findTotalUser" resultType="int">
+        select count(id) from user;
+    </select>
 </mapper>
